@@ -1,0 +1,124 @@
+conn system/lit
+
+drop user cms cascade;
+create user cms identified by cms;
+grant dba to cms;
+conn cms/cms;
+
+create table admin
+(
+	email 		varchar2(60) 	primary key ,
+	password 	varchar2(20)
+);
+Insert into admin values('lit.project.17@gmail.com','litproject17');
+Insert into admin values('x@gmail.com','x');
+
+
+Create table Teacher
+(
+	id 					varchar2(10) 	primary key,
+	name 				varchar2(50),
+	email 				varchar2(40),
+	password 			varchar2(15),
+	phone 				varchar2(10),
+	address 			varchar2(100),
+	gender 				varchar2(10),
+	maritalstatus 		varchar2(15),
+	qualification 		varchar2(15),
+	specialization	 	varchar2(15),
+	department 			varchar2(30),
+	jobtitle 			varchar2(30),
+	salary 				varchar2(20),
+	photo 				varchar2(50),
+	joindate 			varchar2(12),
+	status		 		varchar2(10),
+	message			 	varchar2(200)
+);
+
+
+Create table Student
+(
+	regn 				varchar2(10) 	primary key,
+	name 				varchar2(50),
+	fname	 	 		varchar2(30),
+	mname	 	 		varchar2(30),
+	email 	 			varchar2(40) not null unique,
+	religion 		 	varchar2(20),
+	password 		 	varchar2(15),
+	phone 		 		varchar2(10),
+	address 	 		varchar2(100),
+	gender 		 		varchar2(10),
+	maritalstatus 	 	varchar2(15),
+	qualification 	 	varchar2(15),
+	Branch 				varchar2(30),
+	photo 				varchar2(50),
+	status		 		varchar2(10),
+	message			 	varchar2(200)
+);
+
+Create table studentleave
+(
+	regn 			 	varchar2(10),
+	name 			 	varchar2(50),
+	email 			 	varchar2(40),
+	Phone			 	varchar2(10), 
+	branch			 	varchar2(10), 
+	purpose			 	varchar2(100), 
+	start_date		 	varchar2(30), 
+	end_date		 	varchar2(30),
+	Description		 	varchar2(50),
+	status			 	varchar2(20)
+);
+Create table teacherleave
+(
+	id  			 	varchar2(10),
+	name 			 	varchar2(50),
+	email 			 	varchar2(40),
+	Phone			 	varchar2(10), 
+	department		 	varchar2(10), 
+	purpose			 	varchar2(100), 
+	start_date		 	varchar2(30), 
+	end_date		 	varchar2(30),
+	Description		 	varchar2(50),
+	status			 	varchar2(20)
+);
+	
+ create table january(
+ 	regn 			 	varchar2(10),
+	name 			 	varchar2(50),
+	branch			 	varchar2(10),
+	one 				varchar2(4),
+	two 				varchar2(4),
+	three 				varchar2(4),
+	four 				varchar2(4),
+	five 				varchar2(4),
+	six 				varchar2(4),
+	seven 				varchar2(4),
+	eight 				varchar2(4),
+	nine 				varchar2(4),
+	ten 				varchar2(4),
+	eleven 				varchar2(4),
+	twelve 				varchar2(4),
+	thirteen 				varchar2(4),
+	fourteen 				varchar2(4),
+	fifteen 				varchar2(4),
+	sixteen 				varchar2(4),
+	seventeen 				varchar2(4),
+	eighteen 				varchar2(4),
+	nineteen 				varchar2(4),
+	twenty 				varchar2(4),
+	twentyone 				varchar2(4),
+	twentytwo 				varchar2(4),
+	twentythree 				varchar2(4),
+	twentyfour 				varchar2(4),
+	twentyfive 				varchar2(4),
+	twentysix 				varchar2(4),
+	twentyseven 				varchar2(4),
+	twentyeight 				varchar2(4),
+	twentynine 				varchar2(4),
+	thirty	 				varchar2(4),
+	thirtyone	 			varchar2(4)
+ );
+ 
+ insert into january (regn,name,branch) values('1','Sujit Kumar Das','CSE');
+
